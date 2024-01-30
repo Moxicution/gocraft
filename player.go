@@ -27,7 +27,7 @@ type Player struct {
 	mesh   *Mesh
 }
 
-// 线性插值计算玩家位置
+// Linear interpolation to calculate player position
 func (p *Player) computeMat() mgl32.Mat4 {
 	t1 := p.s2.time - p.s1.time
 	t2 := glfw.GetTime() - p.s2.time

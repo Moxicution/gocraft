@@ -137,11 +137,11 @@ var itemDesc = map[int][6]int{
 }
 
 var availableItems = []int{
-	1,
-	2,
+	1, // grassBlock
+	2, // sandBlock
 	3,
 	4,
-	5,
+	5, // wood
 	6,
 	7,
 	8,
@@ -151,17 +151,17 @@ var availableItems = []int{
 	12,
 	13,
 	14,
-	15,
-	16,
-	17,
-	18,
-	19,
-	20,
-	21,
-	22,
-	23,
-	32,
-	33,
+	15, // leaves
+	16, // cloud
+	17, // grass
+	18, // flower
+	19, // flower
+	20, // flower
+	21, // flower
+	22, // flower
+	23, // flower
+	32, // yellow
+	33, // green
 	34,
 	35,
 	36,

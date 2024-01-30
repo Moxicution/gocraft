@@ -247,7 +247,7 @@ func (g *Game) renderStat() {
 	p := g.camera.Pos()
 	cid := NearBlock(p).Chunkid()
 	stat := g.blockRender.Stat()
-	title := fmt.Sprintf("[%.2f %.2f %.2f] %v [%d/%d %d] %d", p.X(), p.Y(), p.Z(),
+	title := fmt.Sprintf("Camera: [%.2f %.2f %.2f] chunk: %v [%d/%d %d] fps: %d", p.X(), p.Y(), p.Z(),
 		cid, stat.RendingChunks, stat.CacheChunks, stat.Faces, g.fps.Fps())
 	g.win.SetTitle(title)
 }

@@ -257,7 +257,7 @@ func (r *BlockRender) updateMeshCache() {
 
 	for id := range needed {
 		mesh, ok := r.meshcache.Load(id)
-		// 不在cache里面的需要重新构建
+		// Those that are not in the cache need to be rebuilt.
 		if !ok {
 			added = append(added, id)
 		} else {
@@ -268,7 +268,7 @@ func (r *BlockRender) updateMeshCache() {
 			}
 		}
 	}
-	// 单次并发构造的chunk个数
+	//The number of chunks constructed concurrently in a single time
 	const batchBuildChunk = 4
 	r.sortChunks(added)
 	if len(added) > 4 {
