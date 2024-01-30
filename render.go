@@ -163,15 +163,15 @@ func isChunkVisiable(planes []mgl32.Vec4, id Vec3) bool {
 	const m = ChunkWidth
 
 	points := []mgl32.Vec3{
-		mgl32.Vec3{p.X(), p.Y(), p.Z()},
-		mgl32.Vec3{p.X() + m, p.Y(), p.Z()},
-		mgl32.Vec3{p.X() + m, p.Y(), p.Z() + m},
-		mgl32.Vec3{p.X(), p.Y(), p.Z() + m},
+		{p.X(), p.Y(), p.Z()},
+		{p.X() + m, p.Y(), p.Z()},
+		{p.X() + m, p.Y(), p.Z() + m},
+		{p.X(), p.Y(), p.Z() + m},
 
-		mgl32.Vec3{p.X(), p.Y() + 256, p.Z()},
-		mgl32.Vec3{p.X() + m, p.Y() + 256, p.Z()},
-		mgl32.Vec3{p.X() + m, p.Y() + 256, p.Z() + m},
-		mgl32.Vec3{p.X(), p.Y() + 256, p.Z() + m},
+		{p.X(), p.Y() + 256, p.Z()},
+		{p.X() + m, p.Y() + 256, p.Z()},
+		{p.X() + m, p.Y() + 256, p.Z() + m},
+		{p.X(), p.Y() + 256, p.Z() + m},
 	}
 	for _, plane := range planes {
 		var in, out int
